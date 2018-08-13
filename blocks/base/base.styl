@@ -1,0 +1,67 @@
+html
+body
+  reset()
+  font-size font-size-basic
+  line-height line-height-basic
+  color #000
+  display: flex
+  flex-direction: column
+  font-family: 'Roboto', 'Arial', sans-serif
+body 
+    flex: auto
+div 
+    box-sizing: border-box
+.main 
+    display:flex
+    flex-grow: 1
+    padding: 120px 0
+.container 
+    width: 100%
+    margin: 0 
+    padding: 0 16px;
+.base
+    &__mobile-hide
+        display: none
+    &__heading 
+        font-family: 'Montserrat','Tahoma', sans-serif
+    &__h1
+        text-align: center
+        margin: 0 0 40px 0
+        font-size: font-size-h1-mobile
+        line-height: line-height-h1-mobile
+    &__button 
+        display: inline-block
+        padding: 16px 40px
+        border-radius: 4px
+        background-color: #ff0000
+        text-decoration: none
+        font-family: 'Montserrat','Tahoma', sans-serif
+        transition: hover
+        color: #fff
+        cursor: pointer
+        &:hover 
+            background-color: #d70000
+            text-decoration: none
+        
+@media (min-width: 768px) 
+    .base 
+        &__mobile-hide
+            display: block
+        &__h1
+            font-size: font-size-h1
+            line-height: line-height-h1
+    
+    
+@media (min-width: 1024px) 
+    .container 
+        max-width: 990px
+        margin: 0 auto
+        padding: 0
+    
+
+@media (min-width: 1280px) 
+    .container 
+        max-width: 1136px
+    
+@import '__logo/__logo'
+@import '__socicons/__socicons'

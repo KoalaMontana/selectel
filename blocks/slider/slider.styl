@@ -1,0 +1,40 @@
+.slider 
+    color: #fff
+    display: flex
+    flex-direction: column
+    &__slide 
+        display: none
+        flex-direction: column
+        padding: 120px 0 160px
+        &_active
+            display: flex
+    &__item-1
+        background: linear-gradient(top, #2F4966, #34557C)
+    &__item-2
+        background: linear-gradient(top, #2F3F66, #314579)
+    &__item-3
+        background: linear-gradient(top, #2F6066, #327179)
+    &__item-4
+        background: linear-gradient(top, #4E2F66, #603285)
+        
+    &__heading 
+        font-size: font-size-h1-mobile
+        line-height: line-height-h1-mobile
+        font-weight: 600
+        margin-bottom: 40px
+        max-width: 760px
+    &__description
+        display: none
+        margin-bottom: 40px
+        max-width: 580px
+    
+@media (min-width: 768px) 
+    .slider 
+        &__slide 
+            padding-top: 136px
+            height: 600px
+        &__heading 
+            font-size: font-size-h1
+            line-height: line-height-h1
+        &__description
+            display: inherit

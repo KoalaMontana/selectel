@@ -1,0 +1,23 @@
+@import '__phone/__phone'
+.header
+    padding: 40px 0
+    color: #fff
+    position: absolute
+    top: 0
+    left: 0
+    right: 0
+    &__wrapper
+        display: flex
+        flex-wrap: wrap
+        justify-content: space-between
+    &__logo 
+        display: flex
+        width: 112.5px
+    &__phone 
+        display: flex
+        width: 22px
+    
+@media (min-width: 768px) 
+    .header__phone 
+        width: 210px
+    
