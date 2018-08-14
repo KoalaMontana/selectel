@@ -2,24 +2,36 @@
     color: #fff
     display: flex
     flex-direction: column
+    height: 568px
+    position: relative
     &__slide 
-        display: none
+        display: flex
         flex-direction: column
-        padding: 120px 0 160px
+        padding: 120px 0
+        position: absolute
+        top: 0
+        left: 0
+        right: 0
+        opacity: 0
+        transition: .6s ease
         &_active
-            display: flex
+            opacity: 1
     &__item-1
         background: linear-gradient(top, #2F4966, #34557C)
+        z-index: 10
     &__item-2
         background: linear-gradient(top, #2F3F66, #314579)
+        z-index: 11
     &__item-3
         background: linear-gradient(top, #2F6066, #327179)
+        z-index: 12
     &__item-4
         background: linear-gradient(top, #4E2F66, #603285)
+        z-index: 13
         
     &__heading 
-        font-size: font-size-h1-mobile
-        line-height: line-height-h1-mobile
+        font-size: 32px
+        line-height: 40px
         font-weight: 600
         margin-bottom: 40px
         max-width: 760px
@@ -27,14 +39,40 @@
         display: none
         margin-bottom: 40px
         max-width: 580px
-    
+.js-slider__points 
+    display: none       
 @media (min-width: 768px) 
     .slider 
+        height: 600px
         &__slide 
             padding-top: 136px
             height: 600px
         &__heading 
-            font-size: font-size-h1
-            line-height: line-height-h1
+            font-size: 40px
+            line-height: 48px
         &__description
             display: inherit
+    .js-slider
+        &__points 
+            display: block
+            position: absolute
+            bottom: 40px
+            left: 50%
+            transform: translateX(-50%)
+            text-align: center
+            z-index: 90
+        &__point 
+            display: inline-block
+            width: 8px
+            height: 8px
+            border: 1px solid #fff
+            opacity: 0.6
+            transition: opacity .3s ease
+            margin: 0 4px;
+            border-radius: 50%
+            cursor: pointer
+            &:hover
+                opacity: 1
+            &_active
+                background-color: #fff
+   
