@@ -2,7 +2,7 @@
     color: #fff
     display: flex
     flex-direction: column
-    height: 568px
+    height: 600px
     position: relative
     &__slide 
         display: flex
@@ -14,8 +14,10 @@
         right: 0
         opacity: 0
         transition: .6s ease
+        height: 600px
         &_active
             opacity: 1
+            z-index: 50 !important
     &__item-1
         background: linear-gradient(top, #2F4966, #34557C)
         z-index: 10
@@ -39,11 +41,29 @@
         display: none
         margin-bottom: 40px
         max-width: 580px
+    &__arrows
+        position: absolute
+        left: 26px
+        bottom: 34px
+        z-index: 90
+    &__arrow
+        display: inline-block
+        width: 28px
+        height: 28px
+        font-size: 28px
+        line-height: 28px
+        cursor: pointer
+        opacity: 1
+        &.arrow_prev
+            margin-right: 28px
+        &:hover 
+            opacity: 0.6
+        
 .js-slider__points 
-    display: none       
+    display: none
+
 @media (min-width: 768px) 
     .slider 
-        height: 600px
         &__slide 
             padding-top: 136px
             height: 600px
@@ -52,6 +72,9 @@
             line-height: 48px
         &__description
             display: inherit
+        &__arrows {
+            display: none
+        }
     .js-slider
         &__points 
             display: block
